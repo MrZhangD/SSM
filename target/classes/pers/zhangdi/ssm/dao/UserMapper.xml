@@ -7,4 +7,10 @@
 	<select id="findAll" resultType="User">
 		select * from user
 	</select>
+	<update id="addMoney">
+		update user set money = money+#{money} where username = #{user.username}
+	</update>
+	<update id="reduceMoney">
+		update user set money = money-#{money} where username = #{user.username}
+	</update>
 </mapper>

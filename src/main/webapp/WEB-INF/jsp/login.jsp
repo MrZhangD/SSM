@@ -14,6 +14,7 @@
 		<p>密码：<input type="password" name="pwd"></p>
 		<input type="submit" value="登录">
 		</form>
+		<p>又添加了一段文字</p>
 		<p>${fail}</p>
 	</div>
 </body>

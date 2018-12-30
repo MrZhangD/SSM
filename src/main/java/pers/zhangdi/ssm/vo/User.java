@@ -15,6 +15,8 @@ public class User implements Serializable {
 
 	private String username;
 
+	private int money;
+
 	public User() {
 	}
 
@@ -63,9 +65,32 @@ public class User implements Serializable {
 		this.username = username;
 	}
 
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", pwd=" + pwd + ", sex=" + sex + ", username=" + username + "]";
+	public int getMoney() {
+		return money;
 	}
 
+	public void setMoney(int money) {
+		this.money = money;
+	}
+
+	public User(int id, String name, String pwd, String sex, String username, int money) {
+		this.id = id;
+		this.name = name;
+		this.pwd = pwd;
+		this.sex = sex;
+		this.username = username;
+		this.money = money;
+	}
+
+	@Override
+	public String toString() {
+		return "User{" +
+				"id=" + id +
+				", name='" + name + '\'' +
+				", pwd='" + pwd + '\'' +
+				", sex='" + sex + '\'' +
+				", username='" + username + '\'' +
+				", money=" + money +
+				'}';
+	}
 }

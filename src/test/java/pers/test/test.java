@@ -15,8 +15,13 @@ public class test {
 		//Spring 提供staffmapper
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring-mybatis.xml");
 		UserServiceImpl usl = context.getBean("userServiceImpl",UserServiceImpl.class);
-		User user = new User("admin","admin");
-
-		System.out.println(usl.doUserLogin(user));
+		User user1 = usl.doSelectByUsername("zhangdi");
+		User user2 = usl.doSelectByUsername("admin");
+		//转账之前
+		System.out.println("转账之前+++++++++++++++++++++++++++++++++++");
+		System.out.println(user1.getUsername() + "--" + user1.getMoney());
+		System.out.println(user2.getUsername() + "--" + user2.getMoney());
+		//转账
+		usl.transferMoney(user1,user2,500);
 	}
 }

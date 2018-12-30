@@ -8,6 +8,7 @@
 </head>
 <body>
 	<p>${name}</p>
+	${success}
 	恭喜你！！登陆成功
 </body>
 </html>
